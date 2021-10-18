@@ -1,3 +1,4 @@
+import os
 def reverse_string(str):
     str1 = ""
     for i in str:
