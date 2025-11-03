@@ -1,10 +1,9 @@
 import os
+
+str = "hellos"
 def reverse_string(str):
-    str1 = ""
-    for i in str:
-        str1 = i + str1
+    str1 = [::-1]
     return str1
 
-str = "PYTHON"
 print("The original string is this: ", str)
 print("The reverse string is", reverse_string(str))
