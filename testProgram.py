@@ -6,5 +6,5 @@ def reverse_string(str):
     return str1
 
 str = "PYTHON"
-print("The original string is: ", str)
+print("The original string is this: ", str)
 print("The reverse string is", reverse_string(str))
