@@ -1,6 +1,6 @@
 import os
 
-str = "hellos"
+str = "python"
 def reverse_string(str):
     str1 = str[::-1]
     return str1
