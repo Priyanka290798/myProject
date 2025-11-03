@@ -2,7 +2,7 @@ import os
 
 str = "hellos"
 def reverse_string(str):
-    str1 = [::-1]
+    str1 = str[::-1]
     return str1
 
 print("The original string is this: ", str)
