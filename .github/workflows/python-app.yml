@@ -1,20 +1,25 @@
-name: Python application
-
+name: Run Python Script
 on:
-  push:
-    branches: ["main"]
+  push:            # Runs on every push
+    branches:
+      - main
+  workflow_dispatch: # Allows manual trigger from GitHub UI
 
 jobs:
-  build:
+  run-script:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.10"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-    - name: Print
-      run:  python pythonCode.py
+      # Step 1: Checkout repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'  # Change to your required version
+
+      # Step 4: Run your Python script
+      - name: Run Python script
+        run: testProgram.py
