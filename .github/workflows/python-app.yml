@@ -22,4 +22,4 @@ jobs:
 
       # Step 4: Run your Python script
       - name: Run Python script
-        run: testProgram.py
+        run: py testProgram.py
