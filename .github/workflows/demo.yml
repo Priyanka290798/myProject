@@ -1,0 +1,22 @@
+name: demo actions
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Select deployment environment"
+        required: true
+        default: "staging"
+        type: choice
+        options:
+          - staging
+          - production
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print
+        run: |
+          echo "Environment: ${{ github.event.inputs.environment }}"
+        
